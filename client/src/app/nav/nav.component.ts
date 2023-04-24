@@ -11,6 +11,9 @@ import { ToastrService } from 'ngx-toastr';
 export class NavComponent implements OnInit {
 
   model: any = {};
+  path: string[] = [];
+  pathTitle: string;
+
 
   constructor(public accountService: AccountService, private router: Router, private toastr: ToastrService) { }
 
@@ -29,8 +32,7 @@ export class NavComponent implements OnInit {
   login() {
     this.accountService.login(this.model).subscribe(
       {
-        next: _ => this.router.navigateByUrl('/members'),
-        error: error => this.toastr.error(error.error)
+        next: _ => this.router.navigateByUrl('/members')
         // error: error => console.log(error)
       })
   }
