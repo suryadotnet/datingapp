@@ -9,6 +9,7 @@ import { AuthGuard } from './_guard/auth.guard';
 import { TestErrorComponent } from './errors/test-error/test-error.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
         { path: 'members/:id', component: MemberDetailComponent },
         { path: 'lists', component: ListsComponent },
         { path: 'messages', component: MessagesComponent },
+        { path: 'fileupload', component: FileUploadComponent },
       ]
 
   },
